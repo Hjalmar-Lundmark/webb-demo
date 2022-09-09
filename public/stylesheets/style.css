@@ -157,3 +157,9 @@ body {
 h1 {
   font-size: var(--step-5);
 }
+
+nav {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-evenly;
+}

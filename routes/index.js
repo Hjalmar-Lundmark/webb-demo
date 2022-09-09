@@ -10,8 +10,6 @@ router.get('/', async function(req, res, next) {
         .promise()
         .query(`SELECT * from demo`);
     
-        console.log(rows);
-
         res.render('index.njk', {
             title: 'Kursdemo',
             intro: 'En demosida för att ge ett litet smakprov på tekniken och vad den kan göra.',
@@ -22,5 +20,14 @@ router.get('/', async function(req, res, next) {
         next();
     }
 });
+
+router.get('/test', function(request, response) {
+    response.render('test.njk', {
+        title: 'Detta är ett test',
+        intro: 'test. test. test. test. test. test. test. test. test. test.', 
+    });
+
+
+})
 
 module.exports = router;
